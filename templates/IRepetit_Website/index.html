@@ -1,0 +1,15 @@
+{% extends "IRepetit_Website/base.html" %}
+
+{% block title %}IRepetit{% endblock title %}
+
+{% block content %}
+    <form
+            {#        action="{% url 'Repetitors' %}" method="GET"#}
+    >
+        {% csrf_token %}
+        <label for="theme">Введите название предмета</label>
+        <input type="text" id="theme" placeholder="Математика">
+        <button type="submit">Отправить</button>
+    </form>
+{% endblock content %}
+

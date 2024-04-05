@@ -1,0 +1,16 @@
+{% extends "IRepetit_Website/base.html" %}
+
+{% block title %}login{% endblock title %}
+
+{% block content %}
+    <form action="{% url 'login' %}" method="POST">
+        {% csrf_token %}
+        <label for="username">login</label>
+        <input type="text" id="username" name="username" placeholder="ivan_ivanov">
+        
+        <label for="password">password</label>
+        <input type="password" id="password" name="password">
+        
+        <button type="submit">Войти</button>
+    </form>
+{% endblock content %}
